@@ -36,6 +36,9 @@
     color: red;
     transform: scale(1.1);
   }
+  iframe {
+    display: none; /* hide the YouTube player */
+  }
 </style>
 </head>
 <body>
@@ -43,17 +46,15 @@
 <h1>Night</h1>
 <button id="clickMe">Click Me!</button>
 
-<!-- Background Rickroll audio -->
-<audio id="rickroll" autoplay loop>
-  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-</audio>
+<!-- Background Rickroll video (muted autoplay) -->
+<iframe width="0" height="0" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1&playlist=dQw4w9WgXcQ&controls=0&mute=0" allow="autoplay"></iframe>
 
 <script>
   const button = document.getElementById('clickMe');
 
   button.addEventListener('click', () => {
-    // Redirect to YouTube jump-scare car video
-    window.open('https://www.youtube.com/watch?v=O7sY7cOe1gQ', '_blank');
+    // Open your jump scare YouTube video in a new tab
+    window.open('https://youtu.be/GMgsFZ4rkEI?si=pCGcFJDoRfsmCRuT', '_blank');
   });
 </script>
 
