@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -36,25 +36,12 @@
     color: red;
     transform: scale(1.1);
   }
-  #jumpscare {
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background: url('https://i.imgur.com/3VZr3Xf.png') no-repeat center center/cover;
-    display:none;
-    z-index: 9999;
-  }
 </style>
 </head>
 <body>
 
 <h1>Night</h1>
 <button id="clickMe">Click Me!</button>
-
-<!-- Jump scare overlay -->
-<div id="jumpscare"></div>
 
 <!-- Background Rickroll audio -->
 <audio id="rickroll" autoplay loop>
@@ -63,23 +50,10 @@
 
 <script>
   const button = document.getElementById('clickMe');
-  const jumpscare = document.getElementById('jumpscare');
 
   button.addEventListener('click', () => {
-    // Show jump scare
-    jumpscare.style.display = 'block';
-    
-    // Optional: shake effect
-    jumpscare.animate([{ transform: 'translate(0,0)' }, { transform: 'translate(20px,20px)' }, { transform: 'translate(-20px,-20px)' }, { transform: 'translate(0,0)'}], { duration: 500, iterations: 5 });
-    
-    // Play jump scare sound
-    const audio = new Audio('https://www.soundjay.com/horror/sounds/scream-01.mp3');
-    audio.play();
-
-    // Redirect after 1.5 seconds to your main site (or wherever you want)
-    setTimeout(() => {
-      window.location.href = 'https://badboy7657137-bot.github.io'; // replace with your site
-    }, 1500);
+    // Redirect to YouTube jump-scare car video
+    window.open('https://www.youtube.com/watch?v=O7sY7cOe1gQ', '_blank');
   });
 </script>
 
